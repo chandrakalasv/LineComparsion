@@ -25,14 +25,25 @@ public class LineComparison {
         int y4 = sc.nextInt();
         int lengthOfLine2 = (int) Math.sqrt(Math.pow((x4 - x3), 2) + Math.pow((y4 - y3), 2));
         System.out.println("length of line2 is" + " " + lengthOfLine2);
+        System.out.println();
 
-        boolean isEqual = Objects.equals(lengthOfLine1, lengthOfLine2);
-        if (isEqual)
+        boolean isLinesEqual = Objects.equals(lengthOfLine1, lengthOfLine2);
+        if (isLinesEqual)
             System.out.println("Lines are Equal");
         else
             System.out.println("Lines are not Equal");
 
+        Integer line1 = lengthOfLine1;
+        Integer line2 = lengthOfLine2;
+        int result = line1.compareTo(line2);
+        if(result == 1)
+        System.out.println("line1 is greater than line2");
+        else if(result == -1)
+        System.out.println("line1 is smaller than line2");
+        else
+        System.out.println("line1 and line2 are equal");
     }
-
 }
+
+
 
